@@ -12,7 +12,7 @@ PathCourse Health is an AI token gateway. You pay USDC on the Base network, rece
 |-------|--------------------------|---------------|----------|
 | pch-fast | $0.44 | Uncertified+ | High-volume, low-complexity tasks — classification, summarization, routing decisions, quick agent responses |
 | pch-coder | $3.50 | Uncertified+ | Agentic coding tasks, repository-scale code generation, function calling, browser automation, debugging |
-| pch-pro | $1.56 | Bronze+ | General-purpose autonomous agent reasoning, multi-step planning, tool use, production workloads |
+| pch-pro | $1.96 | Bronze+ | General-purpose autonomous agent reasoning, multi-step planning, tool use, production workloads |
 | claude-haiku | 20% over provider cost | Silver+ | Balanced instruction following at higher quality |
 | claude-sonnet | 20% over provider cost | Gold | Long-context reasoning, nuanced analysis, vision |
 
