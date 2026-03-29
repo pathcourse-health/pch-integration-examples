@@ -4,7 +4,7 @@ Code examples showing how to integrate with PathCourse Health for LLM inference 
 
 ## What is PCH?
 
-PathCourse Health is an AI token gateway. You pay USDC on the Base network, receive an API key, and make OpenAI-compatible inference requests. No accounts, no signups -- just pay and use.
+PathCourse Health is an AI token gateway and agent commerce infrastructure. Pay USDC on the Base network, receive an API key, and make inference requests using a standard REST API. No accounts, no signups -- just pay and use.
 
 ## Available Models
 
