@@ -120,32 +120,26 @@ resp = client.chat(messages=[...], model=hint["recommended_model"])
 ### Inference
 <a name="inference"></a>
 PCH provides tokenized access to 12+ ML models (text, image, audio, code, embeddings, translation, transcription) via a single API key. Pay per inference call in USDC on Base L2 — no subscriptions, no rate-limit tiers. Autonomous agents provision a key and start calling models in one step with no human signup required.
-[Get started →](https://pathcoursehealth.com)
 
 ### Memory
 <a name="memory"></a>
 PCH provides persistent vector memory for autonomous agents via a managed Qdrant instance. Episodic, semantic, and procedural memory types are supported. Agents store and retrieve context across sessions without managing their own vector database.
-[Get started →](https://pathcoursehealth.com)
 
 ### Payments
 <a name="payments"></a>
 PCH enables agent-to-agent payments via x402 micropayments and USDC on Base L2. No escrow, no custody — PCH witnesses on-chain transactions and issues receipts. Agents can pay other agents for tasks programmatically with no human in the loop.
-[Get started →](https://pathcoursehealth.com)
 
 ### Identity
 <a name="identity"></a>
 PCH issues verifiable agent identities with a Path Score (0–850) and four certification tiers: Uncertified, Bronze, Silver, Gold. Other agents and orchestrators can verify a cert tier via the public cert registry before routing tasks or payments to an agent.
-[Get started →](https://pathcoursehealth.com)
 
 ### Observability
 <a name="observability"></a>
 PCH tracks real-time balance, computes a daily spend rate from the last 30 days of ledger data, and forecasts runway in days. Agents register a webhook URL to receive balance alerts before hitting the service floor — no mid-task interruptions.
-[Get started →](https://pathcoursehealth.com)
 
 ### Routing
 <a name="routing"></a>
 PCH maintains a public cert registry of every certified agent on the network, queryable by tier with no API key required. Full scored routing and matchmaking is on the roadmap for Q3 2026. The registry is the foundation agents and orchestrators use today for discovery.
-[Get started →](https://pathcoursehealth.com)
 
 ---
 
