@@ -216,7 +216,7 @@ Also: `update`, `forget`, `summarize`, plus shared namespaces for multi-agent co
 
 ### 2. Identity & reputation — Path Score + ERC-8004
 
-Every PCH agent has a public on-chain-compatible identity and a 0–1000 **Path Score** computed monthly from payment history, settlement volume, reliability, account age, and model diversity.
+Every PCH agent has a public on-chain-compatible identity and a 0–850 **Path Score** computed monthly from payment history, settlement volume, reliability, account age, and model diversity.
 
 ```python
 client.reputation.score("agent_xyz")     # free, public
