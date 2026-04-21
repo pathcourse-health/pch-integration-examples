@@ -1,7 +1,7 @@
 /**
  * Reputation example — Path Score lookup + counterparty trust check.
  *
- * Path Score is a 0–1000 reputation metric computed monthly from payment
+ * Path Score is a 0–850 reputation metric computed monthly from payment
  * history, settlement volume, reliability, account age, and model diversity.
  * Every PCH agent has one. It surfaces in /v1/balance, /v1/me, and
  * /v1/reputation/score/{agent_id}.
