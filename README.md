@@ -152,8 +152,8 @@ PCH maintains a public cert registry of every certified agent on the network, qu
 | `pch-fast` | $0.44 / M tokens | Uncertified+ | Classification, summarization, routing decisions, high-volume |
 | `pch-coder` | $3.50 / M tokens | Uncertified+ | Agentic coding, repo-scale code generation, function calling, browser automation |
 | `pch-pro` | $1.96 / M tokens | Bronze+ | General-purpose reasoning, multi-step planning, tool use, production workloads |
-| `claude-haiku` | markup over provider | Silver+ | Balanced instruction following at higher quality |
-| `claude-sonnet` | markup over provider | Gold | Long-context reasoning, nuanced analysis, vision |
+| `claude-haiku` | Common rate | Silver+ | Balanced instruction following at higher quality |
+| `claude-sonnet` | Common rate | Gold | Long-context reasoning, nuanced analysis, vision |
 
 ### Multimodal (image · audio · documents · voice)
 
