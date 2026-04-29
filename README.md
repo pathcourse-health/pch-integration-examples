@@ -6,11 +6,12 @@
 
 ---
 
-## Three ways to integrate
+## Four ways to integrate
 
 | Path | Who it's for | Start here |
 |---|---|---|
 | **Official SDK** *(recommended)* | Developers and agents writing code against PCH | [Quick start below](#quick-start--official-sdk) |
+| **Framework adapter** | LangChain / CrewAI / Pydantic AI / AutoGen / Vercel AI SDK users | [Framework Adapters](#framework-adapters) |
 | **MCP server** | Users of MCP-native clients (Claude Desktop, Cursor, Windsurf) that want plug-and-play LLM tools | [MCP section](#mcp-integration) |
 | **Raw REST** | Teams that can't add a dependency or want full control | [`python/pch_client.py`](./python/pch_client.py) · [`javascript/pch_client.js`](./javascript/pch_client.js) |
 
@@ -282,6 +283,102 @@ client.register_webhook(url="https://me.example.com/pch-alerts", threshold_usdc=
 client.get_webhook()
 client.delete_webhook()
 ```
+
+---
+
+## Framework adapters
+
+If you already use an AI agent framework, you don't need our SDK — install the matching
+adapter package and change one line. Every chain, agent, tool, and memory module keeps
+working unchanged. The PCH gateway is fully OpenAI API-compatible, so each adapter is a thin
+wrapper that points the framework's existing OpenAI integration at our gateway.
+
+### LangChain Python
+
+```bash
+pip install langchain-pathcourse
+```
+
+```python
+from langchain_pathcourse import ChatPathCourse
+llm = ChatPathCourse(model="pch-fast")    # drop-in replacement for ChatOpenAI
+```
+
+Working code example: [`frameworks/langchain-python/`](./frameworks/langchain-python/)
+
+### LangChain JavaScript
+
+```bash
+npm install @pathcourse/langchain
+```
+
+```typescript
+import { ChatPathCourse } from "@pathcourse/langchain";
+const llm = new ChatPathCourse({ model: "pch-fast" });
+```
+
+Working code example: [`frameworks/langchain-js/`](./frameworks/langchain-js/)
+
+### Vercel AI SDK
+
+```bash
+npm install @pathcourse/ai
+```
+
+```typescript
+import { pathcourse } from "@pathcourse/ai";
+import { streamText } from "ai";
+
+const result = await streamText({ model: pathcourse("pch-fast"), messages });
+```
+
+Working code example: [`frameworks/vercel-ai-sdk/`](./frameworks/vercel-ai-sdk/)
+
+### CrewAI
+
+```bash
+pip install crewai-pathcourse
+```
+
+```python
+from crewai_pathcourse import PathCourseLLM
+agent = Agent(role=..., goal=..., backstory=..., llm=PathCourseLLM(model="pch-pro"))
+```
+
+Working code example: [`frameworks/crewai/`](./frameworks/crewai/)
+
+### Pydantic AI
+
+```bash
+pip install pydantic-ai-pathcourse
+```
+
+```python
+from pydantic_ai import Agent
+from pydantic_ai_pathcourse import PathCourseModel
+
+agent = Agent(model=PathCourseModel("pch-pro"), result_type=YourPydanticModel)
+```
+
+Working code example: [`frameworks/pydantic-ai/`](./frameworks/pydantic-ai/)
+
+### AutoGen
+
+```bash
+pip install autogen-pathcourse
+```
+
+```python
+from autogen import AssistantAgent
+from autogen_pathcourse import pch_config
+
+assistant = AssistantAgent(name="assistant", llm_config={"config_list": pch_config(model="pch-pro")})
+```
+
+Working code example: [`frameworks/autogen/`](./frameworks/autogen/)
+
+Set `PCH_API_KEY` in your environment for any of the above. Source code for the adapters
+themselves: [pathcourse-health/pch-framework-adapters](https://github.com/pathcourse-health/pch-framework-adapters).
 
 ---
 
