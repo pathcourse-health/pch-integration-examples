@@ -180,10 +180,13 @@ PCH maintains a public cert registry of every certified agent on the network, qu
 
 | Tier | Deposit (USDC) | Unlocks |
 |---|---|---|
+| **Developer** | $5 | `pch-fast`, `pch-embed`, `pch-translate` (+ 15 % surcharge). Auto-upgrades to Uncertified at $25 lifetime deposits. |
 | **Uncertified** | $25 | `pch-fast`, `pch-coder`, `pch-embed`, `pch-translate` (+ 15 % surcharge) |
 | **Bronze** | $75 | + `pch-pro`, `pch-audio`, `pch-documents`, `pch-transcribe`, `pch-extract`, `pch-rerank` |
 | **Silver** | $250 | + `pch-image`, `pch-audio-premium`, `pch-talk`, `claude-haiku` |
 | **Gold** | $750 | + `claude-sonnet` |
+
+Send **$5 USDC** on Base to test any integration — that's enough for thousands of `pch-fast` calls. Top up to $25 lifetime and your account auto-upgrades to Uncertified with `pch-coder` access too.
 
 Call `client.get_models(scope="my_tier")` to list only the models **your** key can actually call.
 
@@ -483,7 +486,7 @@ The `X-PAYMENT-PROOF` header accepts either base64-encoded JSON or plain JSON:
 | Network | Base (chain ID 8453) |
 | Currency | USDC |
 | USDC contract | `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` |
-| Minimum deposit | $25 USDC |
+| Minimum deposit | **$5 USDC (Developer)** / $25 USDC (Uncertified) |
 | Settlement | x402 protocol |
 
 ---
